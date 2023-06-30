@@ -1,0 +1,11 @@
+from django.db import models
+
+# Create your models here.
+
+class userAuthModal(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField(unique=True)
+    age = models.IntegerField()
+    password = models.CharField(max_length=50)
+    cpassword = models.CharField(max_length=50)
+    
