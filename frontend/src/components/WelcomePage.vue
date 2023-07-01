@@ -4,8 +4,8 @@
   <div class="container py-4">
     <div class="p-5 mb-4 bg-body-tertiary rounded-3">
       <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold">Welcome to the Twitter App</h1>
-        <p class="col-md-8 fs-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, voluptate officia ad ducimus illo officiis sequi cum dolor quas voluptatibus?
+        <h1 class="display-5 fw-bold text-black">Welcome to the Twitter App</h1>
+        <p class="col-md-8 fs-4 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, voluptate officia ad ducimus illo officiis sequi cum dolor quas voluptatibus?
              Accusamus quia sequi est deleniti dolorem. Dicta assumenda provident nesciunt.</p>
              
         <button class="btn btn-primary btn-lg" type="button" @click="togglefrom">Register to view more</button>

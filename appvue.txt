@@ -1,0 +1,47 @@
+<template>
+
+<!-- <LoginPage></LoginPage> -->
+<NavPage v-if="userLoggedIn"></NavPage>
+<router-view></router-view>
+<Welcomepage></Welcomepage>
+
+
+</template>
+
+<script>
+
+import NavPage from './components/NavPage.vue';
+import LoginPage from './components/LoginPage.vue'
+import { mapStores } from 'pinia'
+import useUserStore from '@/stores/user'
+
+import Welcomepage from './components/WelcomePage.vue'
+import LoginForm from './components/LoginForm.vue';
+
+
+export default{
+  data(){
+    return{
+      userLoggedIn: true
+    }
+  },
+  computed: {
+    ...mapStores(useUserStore)
+  },
+
+  components:{
+    NavPage,
+    LoginPage,
+    Welcomepage,
+    LoginForm,
+  }
+}
+
+</script>
+
+
+
+
+
+
+

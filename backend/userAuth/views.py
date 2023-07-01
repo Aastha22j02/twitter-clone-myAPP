@@ -27,17 +27,18 @@ class LoginViewSet(viewsets.ViewSet):
     def create(self, request):
         email = request.data.get('email')
         password = request.data.get('password')
-        print(f"Your enterd mail is {email}")
-        print(f"Your enterd password is {password}")
+        # print(f"Your enterd mail is {email}")
+        # print(f"Your enterd password is {password}")
         
-        users = userAuthModal.objects.values('email', 'password')
+        users = userAuthModal.objects.values('name', 'email', 'password')
         
         for user in users:
             print(f"{user}")
 
         for user in users:
             if user['email'] == email and user['password'] == password:
-                return Response({'message': 'Login successful'})
+                return Response({'message': 'Login successful',
+                                 'username':user['name'] })
                 
         
         return Response({'message': 'Invalid credentials'}, status=400)
